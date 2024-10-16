@@ -1,0 +1,302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46766886-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-46766886-4');
+  </script>
+
+
+<script type="text/javascript">
+  function visibility_on(id) {
+       var e = document.getElementById(id+"_text");
+       if(e.style.display == 'none')
+           e.style.display = 'block';
+       var e = document.getElementById(id+"_img");
+       if(e.style.display == 'none')
+           e.style.display = 'block';
+  }
+  function visibility_off(id) {
+       var e = document.getElementById(id+"_text");
+       if(e.style.display == 'block')
+           e.style.display = 'none';
+       var e = document.getElementById(id+"_img");
+       if(e.style.display == 'block')
+           e.style.display = 'none';
+  }
+  function toggle_visibility(id) {
+      var e = document.getElementById(id+"_text");
+      if(e.style.display == 'inline')
+         e.style.display = 'block';
+      else
+         e.style.display = 'inline';
+      var e = document.getElementById(id+"_img");
+      if(e.style.display == 'inline')
+         e.style.display = 'block';
+      else
+         e.style.display = 'inline';
+  }
+  function toggle_vis(id) {
+      var e = document.getElementById(id);
+      if (e.style.display == 'none')
+          e.style.display = 'inline';
+      else
+          e.style.display = 'none';
+  }
+</script>
+
+
+  <meta name=viewport content="width=800">
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <style type="text/css">
+    /* Color scheme stolen from Sergey Karayev */
+    
+    a {
+      color: #1772d0;
+      text-decoration: none;
+    }
+    
+    a:focus,
+    a:hover {
+      color: #f09228;
+      text-decoration: none;
+    }
+    
+    body,
+    td,
+    th,
+    tr,
+    p,
+    a {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px
+    }
+    
+    strong {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+    
+    heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 22px;
+    }
+    
+    papertitle {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: 700
+    }
+    
+    name {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 32px;
+    }
+    
+    .one {
+      width: 160px;
+      height: 160px;
+      position: relative;
+    }
+    
+    .two {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+    
+    .fade {
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+    
+    span.highlight {
+      background-color: #ffffd0;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="images/seal_icon.png">
+  <title>CS 6789 Foundations of RL</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>
+  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tr>
+      <td>
+        
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <p align="center">
+                <name>Important Dates</name>
+              </p>
+	      <p>
+	      <br><strong>Proposal due: </strong> 11/18/2024</br>
+	      <br><strong>Milestone report due: </strong> 12/2/2024</br>
+	      <br><strong>Final report due: </strong> 12/13/2024</br>
+              </br>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <p align="center">
+                <name>Grading</name>
+              </p>
+	      <p>
+	      <br><strong>Proposal: </strong> 10%</br>
+	      <br><strong>Milestone report: </strong> 20%</br>
+	      <br><strong>Final report: </strong> 70% </br>
+	      </br>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+
+	<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+	  <tr>
+	    <td width="100%" valign="middle">
+	      <p align="center">
+	      <name>Policies</name>
+	      </p>
+            Projects must be undertaken in groups of 2 or 3 people. Individual projects are not permitted. <strong> All projects must have an empirical component.</strong> Students can either implement algorithms on MDPs they construct, replicate prior work on small MDPs, or use simulators or real data. If students opt to construct their own MDPs, they should carefully consider which class of MDPs would be intriguing to examine.
+
+            <p><strong>Report, Milestone, and Proposal Formats</strong>: We adhere to the 
+                <a href="https://neurips.cc/Conferences/2020/CallForPapers">NeurIPS format</a>. You must use the NeurIPS LaTeX format.
+            </p>
+            
+            <p><strong>Proposal</strong>: Your proposal should be a maximum of 2 pages (in the NeurIPS format) and must state your project title and team members. It should also include preliminary potential formulations, a timeline detailing steps for the milestone and project completion, a description of the data you intend to use (e.g., a simulator, real/offline data, or synthetic MDPs you construct), and a brief discussion on the algorithms you plan to explore, along with your implementation strategy. Ensure your timeline aligns with understanding the algorithmic approaches.
+            </p>
+            
+            <p><strong>Milestone Report</strong>: For your milestone submission, please prepare a document of up to 4 pages. You are welcome to incorporate any relevant material from this milestone into your final report. In your milestone, it's essential to rearticulate your problem formulation, reflecting its current status. This should include a clear outline of the RL aspects under investigation, your motivation for choosing them, and any related work if applicable. Also, detail the data you've gathered, whether it's synthetic or real, and provide an overview of your preliminary code development or any experiments conducted to date. Particular emphasis should be placed on demonstrating that you have thought through how your project will explore some RL component.
+            </p>
+            
+            <p><strong>Final Report</strong>: Your final report should be a maximum of 9 pages, excluding references. It will be evaluated based on the following criteria:
+                <ul>
+                <li><strong>Merit</strong>: Do you have sound reasoning for the approach? Is the question well motivated and are you taking a justifiably simple approach or, if you are choosing a more complicated method, do you have sound reasoning for doing this?</li>
+                <li><strong>Technical depth</strong>: How technically challenging was what you did? Did you use a package or write your own code? It is fine if you use a package, though this means other aspects of your project must be more ambitious.</li>
+                    <li><strong>Presentation</strong>: Does your report comprehensively explain your methodology, results, and interpretations? Did you incorporate effective graphs and visualizations? How clear is your writing? Have you justified your chosen approach?</li>
+                </ul>
+            </p>
+        </td>
+    </tr>
+</table>
+
+
+
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="67%" valign="middle">
+              <p align="center">
+                <name>Project Ideas</name>
+                
+              </p>
+
+              <p> We provide a few project ideas below. Please remember that all reports
+              must have an empirical component.
+              </p>
+	      <br> <strong> Multi-agent Reinforcement Learning: </strong> Explore what happens with multiple agents in the same environment with their own rewards. In some cases, like games, they could oppose each other, see e.g., <a href="https://arxiv.org/abs/1911.10635">Zhang et al.</a>
+	      </br>
+	      <br> <strong> Restless Multi-Armed Bandits: </strong> Explore what happens in the "restless MAB" setting, where each arm also has a state that changes over time. see e.g., <a href="https://teamcore.seas.harvard.edu/files/teamcore/files/2016_15_teamcore_aamas2016_eve_yundi.pdf">Qian et al.</a>
+	      </br>
+	      <br> <strong> 2048 Gameplay with MDPs: </strong> Explore how the game 2048 can be studied with MDPs. see e.g., <a href="https://arxiv.org/pdf/2110.10374.pdf">Li et al.</a>, <a href="https://web.stanford.edu/class/aa228/reports/2020/final41.pdf">Goenawan et al.</a>, <a href="https://www.cs.ru.nl/bachelors-theses/2020/Johan_Sijtsma___4793676___Creating_a_Formal_Model_of_the_Game_2048.pdf">Sijtsma</a>
+	      </br>		
+	      <br> <strong> Flappy Bird Gameplay with RL: </strong> Explore how the game Flappy Bird can be studied with Reinforcement Learning. see e.g., <a href="https://towardsdatascience.com/reinforcement-learning-in-python-with-flappy-bird-37eb01a4e786">Blog Post</a>
+	      </br>
+	      <br> <strong> Continuous MDPs: </strong> Most of the RL methods we have looked at in class concern discrete state and action spaces. However, in many RL settings, the state and or action space may in fact be continuous. In this setting, we have two choices-we may discretize the state and/or action space, or use an RL method that supports continuous state and/or action spaces. This project would involve setting up some continuous MDP environments and investigating when discretization of state spaces works "well" or "badly", in terms of final performance, training speed, compute, etc. You could also explore different discretization methods, or continuous methods independently as opposed to looking at both.
+	      </br>
+	      <br> <strong> Aggregated Delayed Reward MAB: </strong> In the multi-armed bandit setting, the learner pulls one of K arms and aims to minimize its regret. However, in some settings, the reward is not known individually between the arms. We aim to extract the signal from the optimal action even when feedback between arms are aggregated or delayed. This project would involve investigating existing methods geared towards Aggregated delayed reward MABs and implementing them in example environments. Possible extensions include finding new algorithms for this task and finding their regret bounds or applying this framework to new aggregate-reward scenarios.
+	      </br>
+	      <br> <strong> Tabular MDPs: </strong> Come up with some interesting (and difficult) candidate tabular MDPs and test some example algorithms. What are hard tabular MDPs? Hard for which algorithms?
+	      </br>
+	      <br> <strong> Contextual MAB: </strong> We will cover contextual bandits later in the course, but the key idea is that each arm has a "context" vector that has some relationship to the unknown distribution parameter.  Choose an application of MAB that has some form of context. Either find some real data or simulate some fake data in this setting. How much does having the context improve the algorithm performance? What are the best algorithms that you can find (either covered in class or from other sources) for performing contextual MAB in your setting? What happens if you add adversarial or random corruptions in your context? 
+	      </br>
+	      <br> <strong> Miscellaneous Project Ideas: </strong> Explore examples with one of the advanced topics from class: MCTS, Imitation Learning, Policy Gradient Approaches, etc.
+	      </br>
+	      <br> <strong> Miscellaneous Project Ideas: </strong> For more project idea inspiration, please check out the projects from previous reinforcement learning courses. Some of these courses are graduate courses, but you can still take inspiration from the projects.
+		<a href="https://courses.cs.washington.edu/courses/cse599m/19sp/projects.html"> Course 1 </a>, <a href="https://wensun.github.io/CS6789projects.html"> Course 2 </a>
+	      </br>
+	      <!--
+	      <br> <strong> Refined analysis in Tabular MDPs: </strong> Conduct a survey on a family of tabular MDP papers with tight regret bounds, e.g., <a href="https://arxiv.org/abs/1703.05449"> Azar et.al </a>, 
+	      <a
+	      href="http://papers.nips.cc/paper/7735-is-q-learning-provably-efficient">Jin
+	      et.al</a>, 
+	      <a href="https://arxiv.org/abs/2005.00527">Wang et.al</a>
+	      </br>
+	      
+	      <br> <strong> Comparison between variants of linear MDP models: </strong> Conduct a survey on papers with some kind of linear structures, e.g., <a href="https://arxiv.org/abs/1905.10389"> Yang and Wang </a>, 
+	      <a href="http://proceedings.mlr.press/v125/jin20a/jin20a.pdf">Jin et.al</a> </br>
+	      
+	      <br> <strong> Thompson Sampling in RL: </strong> Survey Thompson sampling techniques used in RL. <a href="https://djrusso.github.io/docs/TS_Tutorial.pdf">This</a> is a good starting point. 
+	      </br>
+	      
+	      <br> <strong> Gittins Index: </strong> Understand and survey the
+	      Gittins index method. This is a framework for Bayes
+	      optimal learning for multi-armed
+	      bandits. Think about open questions and why extensions
+	      are difficult. <a href="https://www.mit.edu/~jnt/Papers/J048-94-jnt-gittins.pdf">This</a> is a good starting point. 
+	      </br>
+	      
+	      <br> <strong> RL with Constraints: </strong> RL with
+	      convex and knapsack constraints is studied <a
+	      href="https://arxiv.org/pdf/2006.05051.pdf">here</a> for
+	      tabular settings.  Can you extend it to non-tabular
+	      setting such as linear MDPs? </br>
+	      
+	      <br> <strong> Policy Gradient: </strong> Starting from
+	      <a href="https://arxiv.org/abs/1908.00261"> the analysis
+	      of PG/NPG</a>, can you think about how to do data-reuse
+	      in policy optimization to potentially improve its sample
+	      complexity?  </br>
+
+<br> <strong> Policy Gradient with Exploration: </strong> Starting
+from <a href="https://arxiv.org/abs/2007.08459">PC-PG</a>, can you
+think about ways to improve its sample complexity?  </br>
+
+             -->
+
+
+
+            </td>
+          </tr>
+        </table>
+
+       
+
+
+            </td>
+          </tr>
+        </table>
+
+
+        
+
+
+     
+
+
+        
+        </td>
+    </tr>
+  </table>
+</body>
+
+</html>

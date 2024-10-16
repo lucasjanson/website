@@ -1,0 +1,11 @@
+<pre>
+@InProceedings{ES-LJ-MP:2015,
+  title={Optimal Sampling-Based Motion Planning under Differential
+    Constraints: the Drift Case with Linear Affine Dynamics},
+  author={Schmerling, Edward and Janson, Lucas and Pavone, Marco},
+  booktitle={Conference on Decision and Control},
+  year={2015}
+  address={Osaka, Japan},
+  month={December}
+}
+</pre>

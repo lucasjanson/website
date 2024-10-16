@@ -1,0 +1,11 @@
+<pre>
+@InProceedings{LJ-TH-MP:2018,
+  title={Safe Motion Planning in Unknown Environments: Optimality Benchmarks and Tractable Policies},
+  author={Janson, Lucas and Hu, Tommy and Pavone, Marco},
+  booktitle={Robotics: Science and Systems},
+  year={2018},
+  address={Pittsburgh, USA},
+  month={June},
+  note={To appear}
+}
+</pre>

@@ -1,0 +1,886 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46766886-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-46766886-4');
+  </script>
+
+
+  <script type="text/javascript">
+    function visibility_on(id) {
+      var e = document.getElementById(id + "_text");
+      if (e.style.display == 'none')
+        e.style.display = 'block';
+      var e = document.getElementById(id + "_img");
+      if (e.style.display == 'none')
+        e.style.display = 'block';
+    }
+    function visibility_off(id) {
+      var e = document.getElementById(id + "_text");
+      if (e.style.display == 'block')
+        e.style.display = 'none';
+      var e = document.getElementById(id + "_img");
+      if (e.style.display == 'block')
+        e.style.display = 'none';
+    }
+    function toggle_visibility(id) {
+      var e = document.getElementById(id + "_text");
+      if (e.style.display == 'inline')
+        e.style.display = 'block';
+      else
+        e.style.display = 'inline';
+      var e = document.getElementById(id + "_img");
+      if (e.style.display == 'inline')
+        e.style.display = 'block';
+      else
+        e.style.display = 'inline';
+    }
+    function toggle_vis(id) {
+      var e = document.getElementById(id);
+      if (e.style.display == 'none')
+        e.style.display = 'inline';
+      else
+        e.style.display = 'none';
+    }
+  </script>
+
+
+  <meta name=viewport content="width=800">
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <style type="text/css">
+    /* Color scheme stolen from Sergey Karayev */
+
+    a {
+      color: #1772d0;
+      text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+      color: #f09228;
+      text-decoration: none;
+    }
+
+    body,
+    td,
+    th,
+    tr,
+    p,
+    a {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px
+    }
+
+    strong {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 22px;
+    }
+
+    papertitle {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: 700
+    }
+
+    name {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 32px;
+    }
+
+    .one {
+      width: 160px;
+      height: 160px;
+      position: relative;
+    }
+
+    .two {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+
+    .fade {
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+
+    span.highlight {
+      background-color: #ffffd0;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="images/seal_icon.png">
+  <title>CS/Stat 184 Intro to RL</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+</head>
+
+
+<body>
+  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tr>
+      <td>
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="67%" valign="middle">
+              <p align="center">
+                <name>CS/Stat 184(0): Introduction to Reinforcement Learning</name>
+              </p>
+              <hr>
+
+              <br> Modern AI systems often need the ability to make
+              sequential decisions in an unknown, uncertain, possibly
+              hostile environment, by actively interacting with the
+              environment to collect relevant data. Reinforcement
+              Learning (RL) is a general framework that can capture the
+              interactive learning setting and has been used to design
+              intelligent agents that achieve high-level performance in
+              challenging applications such as Go, computer games,
+              robotic manipulation, health care, and education. <br />
+
+              <br> This course provides an introduction to reinforcement
+              learning covering a range of problem formulations,
+              algorithms, and theory. The four main themes of the course
+              are <strong> (1) Markov decision processes (Bellman
+                equations/optimality, planning, UCB, unknown environments,
+                linear quadratic control, exploration, imitation
+                learning), (2) bandits (epsilon-greedy, UCB, Thompson
+                sampling, contextual bandits, linear bandits, exploration
+                in MDPs), and (3) deep RL and methods for large-scale
+                systems (policy gradient methods, Monte Carlo tree search,
+                Q-learning, imitation learning). </strong><br />
+
+              <br> There will also be an Embedded Ethics lecture on
+              ethical issues arising in reinforcement learning. The
+              assignments will focus on a mix of algorithmic and
+              statistical principles, along with their programming
+              implementations. <br />
+
+              <br>After taking this course, students will be able to understand fundamental RL algorithms and their
+              analysis. <br />
+
+              <br><strong> The course will go through algorithms and
+                their analysis. All homework will have a programming
+                component to give students more hands-on experience with
+                the concepts.</strong> <br />
+
+            </td>
+          </tr>
+        </table>
+
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <p align="center">
+                <heading>Staff and Organization</heading>
+              </p>
+              <p>
+                <br><strong>Instructor</strong>: <a href="http://lucasjanson.fas.harvard.edu/">Lucas Janson</a>
+                <br />
+                <br><strong>TFs</strong>:
+                Anvit Garg, Nowell Closser
+                <br />
+                <br><strong>CAs</strong>:
+                Jayden Personnat, Sibi Raja, Alex Cai, Ethan Tan, Neil Shah, Jason Wang, Russell Li, Sid Bharthulwar,
+                Andrew Gu, Ian Moore
+                <br />
+                <br><strong>Calendar</strong>: <a href="https://calendar.google.com/calendar/u/0?cid=Y19iZGRiY2ZmZTBlOWFkODk4Y2YxYTllNGY3NmI4M2M2ZTVmZmUyZWM0OWJiOTU2M2ZlNDQ4ZGI3MDAwODZhYzYwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20">Google Calendar</a><br />
+<br><strong> **Please double check the Google Calendar for the most up to date information on location changes/cancellations before you arrive.** </strong> <br />
+<br><strong> Lecture time: </strong> Monday/Wednesday 10:30am - 11:45am <br />
+                <br><strong> Lecture location: </strong> Room 118, Yenching Auditorium, 2 Divinity Avenue <br />
+                <br><strong> Sections (starting 9/4/24): </strong><br /><br>
+                Wednesday 4:30pm - 5:30pm (Sever 109)<br /><br>
+                Thursday 9:00am - 10:00am (Science Ctr 110)<br /><br>
+                Thursday 4:30pm - 5:30pm (Science Ctr 706)<br /><br>
+                Friday 10:30am - 11:30am (Lowell Lecture Hall B13)<br /><br>
+                Friday 1:30pm - 2:30pm (Memorial Hall 302)<br />
+
+                <br><strong>Instructor office hours: </strong> Wednesday 3:00pm - 5:00pm, Science Center 710 <br />
+                <br><strong>TAs office hours: </strong>
+                <bf /><br>
+                Monday 4:00pm - 6:00pm (Leverett Dining Hall)<br /><br>
+                Monday 8:00pm - 10:00pm (Mather Dining Hall)<br /><br>
+                Tuesday 3:00pm - 5:00pm (Science Ctr 316)<br /><br>
+                Tuesday 8:00pm - 10:00pm (Lowell Dining Hall)<br /><br>
+                Thursday 5:30pm - 7:30pm (Science Ctr 705)<br /><br>
+                Friday 4:30pm - 6:30pm (Science Ctr 705)<br /><br>
+                Sunday 1:30pm - 3:30pm (Science Ctr 316)<br />
+
+                <br><strong>Discussion: </strong> <a href="https://edstem.org/us/courses/65150/discussion/">Ed
+                  discussion board</a><br />
+                <br><strong>Contact Info:</strong> <br />
+                <br> Please only communicate with any of the course staff (including the instructor)
+                by making a post that is "Private", i.e., "Visible to you and staff only" in Ed.
+                Any course related email sent directly to the instructors will not be responded to in a timely manner.
+                <br />
+                <br><strong>Announcements:</strong> <br />
+                <br> Please make sure you monitor for (and receive) announcements from both the official Canvas class
+                mailing
+                list and from Ed. Ed is a convenient way to send out some announcements, such as homework corrections
+                and clarifications. It is important for you to make sure you get these announcements in a timely manner.
+                <br />
+              </p>
+            </td>
+          </tr>
+        </table>
+
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <p align="center">
+                <heading>Prerequisites</heading>
+              </p>
+              <p>
+                <br>Lectures will
+                focus on algorithm design and analysis. We require a
+                background in: calculus & linear algebra (e.g., AM22a, Math
+                21b), probability theory (e.g., Stat 110), and programming
+                in Python. The following topics are recommended but not
+                required: linear regression, supervised learning,
+                algorithms. <br />
+                <br> Homeworks will
+                have a programming component, and we expect students to be
+                comfortable with programming in Python (or committed to
+                quickly learning it). We will use Python as the programming language in all homeworks.<br />
+              </p>
+            </td>
+          </tr>
+        </table>
+
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                                     <tr>
+            <td width="100%" valign="middle">
+              <p align="center">
+                <heading>Grading Policies</heading>
+              </p>
+              <p>
+
+                <br> <strong> Participation 5%; Homework
+                  45% (HW0: 5%, HW1-HW4: 40% total);
+                  Midterm 20%; Project 30%; </strong><br />
+
+                <br> The course is letter-graded by default, but you may
+                switch to SAT/UNSAT if you prefer. <br />
+
+                <br> In order to pass the course, <strong> you must
+                  attempt and submit all homework</strong>, even if they are
+                submitted for zero credit (as per the late policy
+                below). We will also have an "embedded ethics" lecture
+                with 1-2 corresponding questions, either incorporated into
+                a homework or as a standalone short assignment (with the
+                grading scheme adjusted appropriately). All homeworks are
+                mathematical and have a programming component (we use
+                Python and <a href="https://gymnasium.farama.org/">Gymnasium</a>, formerly OpenAI
+                Gym). <br />
+
+                <br><strong>Participation: </strong> 5% of the grade will
+                be participation. People can participate in the course in
+                many different ways, including regular attendance of
+                lectures (there will be a form after each class where
+                students can record their attendance), participating in
+                section, in the Ed forum, and more. At the end of the
+                term, you will write a paragraph on how you participated
+                in the course. The requirements to get the full 5%
+                contribution will not be too onerous, and regularly
+                attending the lectures will suffice. If for some reason
+                you are not able to regularly attend all the lectures,
+                then increased participation in Ed and section will be
+                sufficient. If you have another responsibility that
+                prevents you from attending all the lectures, please let
+                us know by making a post that is "Private", i.e., "Visible to
+                you and staff only" in Ed, and we will take this into
+                consideration. <br />
+
+                <br> <strong>Homework Policies: </strong>Collaboration is permitted
+                though each student must understand, write, and hand in
+                their own submission. In particular, it is acceptable for
+                students to discuss problems with each other; it is not
+                acceptable for students to look at another student's
+                written answers. It is also not acceptable to publicly
+                post your (even partial) solution on Ed, but it is
+                encouraged for you to ask public questions on Ed. You
+                must also indicate on each homework with whom you
+                collaborated and what online resources you used. <br />
+
+                <br> Each student will have <strong>96 cumulative hours
+                </strong> of late time (as measured on Gradescope), which will
+                be forgiven. After this cumulative amount of time has
+                passed, any assignment that is turned in late will receive
+                zero credit. Furthermore, only up to 48 hours of late time
+                may be used on any one assignment; any assignment turned
+                in more than 48 hours late will receive zero credit. You are expected to track your own late time. Your grades on gradescope will not reflect late time.
+                <br />
+
+                <br> The final homework score for HW1-4 will be
+                determined by summing up the total points earned across
+                all four assignments. This sum will then be divided by
+                the total possible points to calculate the overall
+                percentage score for the HW1-4 component of the
+                course. <br />
+
+                <br> We highly encourage you to use LaTeX. We will also
+                accept neatly written handwritten homework. <br />
+
+                <br> <strong>Homeworks must be submitted through <a
+                    href="https://www.gradescope.com/courses/845617">Gradescope</a>. PDF
+                  files of the homeworks can be accessed on Gradescope. PDF and LaTeX
+                  files for the homeworks will also be uploaded to <a
+                    href="https://canvas.harvard.edu/courses/140705/files/folder/Homeworks">Canvas</a>.</strong><br />
+
+
+
+
+                <br><strong>Regrading Policy: </strong>
+                All homework regrading requests must be submitted on Gradescope within
+                seven days after the grades are released. For example,
+                if we release the grades on Monday, then you have until midnight the
+                following Monday to submit any regrade requests. If you feel that we
+                have made an error in grading your homework, please let us know with a
+                written explanation. This policy is to ensure that we can address any
+                concerns in a timely and fair manner. The focus of office hours and in
+                person discussions are solely limited to asking knowledge-related
+                questions. Grade-related questions must be submitted by making a post
+                that is "Private", i.e., "Visible to you and staff only" in Ed. <br />
+
+                <br><strong>Project: </strong>
+                Please see the course project <a href="Fall24_projects.html">page</a>.
+              </p><br />
+
+
+              <!--
+                <br><strong>Late days: </strong> Homeworks must be submitted by the posted due date. 
+                  You are allowed up to 6 total LATE DAYs for the homeworks throughout the entire semester. These will be automatically deducted if your assignment is late. 
+                  For example, any day in which an assignment is late by up to 24 hours, 
+                  then one late day will be used (up to two late days). After your late days are used up, 
+                  late penalties will be applied: any assignment turned in late will incur a reduction in score by 33% for each late day, 
+                  so if an assignment is up to 24 hours late, it incurs a penalty of 33%. 
+                  Else if it is up to 48 hours late, it incurs a penalty of 66%. 
+                  And any longer, it will receive no credit. We will track all your late days and any deductions will be applied in computing the final grades. 
+                  If you are unable to turn in HWs on time, aside from permitted days, then do not enroll in the course.<br/>
+-->
+              </p>
+            </td>
+          </tr>
+        </table>
+
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <p align="center">
+                <heading>Diversity and Inclusiveness</heading>
+              </p>
+              <p>
+                While many academic disciplines have historically been dominated by one cross section of society,
+                the study of and participation in STEM disciplines is a joy that the instructors hope that everyone can
+                pursue,
+                regardless of their socio-economic background, race, gender, etc.
+                We encourage students to both be mindful of these issues, and,
+                in good faith, try to take steps to fix them.
+              </p>
+              <p>
+                You should expect to be treated by your classmates and the course staff with respect.
+                You belong here, and we are here to help you learn and enjoy this course.
+                If any incident occurs that challenges this commitment to a supportive and inclusive environment,
+                please let the instructors know so that the issue can be addressed. We are personally committed to this
+                and subscribe to
+                <a
+                  href="https://www.harvard.edu/about/diversity-and-inclusion/#:~:text=We%20all%20belong%20here,each%20member%20of%20our%20community.">Harvard's
+                  Values for Inclusion</a>.
+              </p>
+            </td>
+          </tr>
+        </table>
+
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <p align="center">
+                <heading>Honor Code</heading>
+              </p>
+              <p>
+                <strong>
+                  <li>You must always understand and write up your own solutions. </li>
+                </strong>
+                <li>Collaborations only where explicitly allowed.</li>
+                <li>Do not use forums like Course Hero, Chegg, etc. </li>
+                <li>Properly cite any outside materials you use for your homeworks. Do not directly search for answers
+                  on the
+                  internet. If you are unclear about
+                  whether some online material can be used, please ask the course staff first.</li>
+                <li>No sharing of your solutions within or outside
+                  class at any time.</li>
+                <li>Do not use AI tools to explicitly
+                  obtain answers. Think of AI tools as you would a
+                  message board or collaborator: you can use it for assistance
+                  (and if you do, you should cite it) but you may not directly ask it for the answer. </li>
+              </p>
+              <p>The above is not an exhaustive list, and in general,
+                common sense rules about academic integrity apply. If it is
+                something in doubt, please ask us whether it is OK before you
+                do it. Also see the <a href="https://honor.fas.harvard.edu/honor-code">Harvard
+                  College Honor Code.</a> </p>
+            </td>
+          </tr>
+        </table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <p align="center">
+                <heading>Course Materials</heading>
+              </p>
+              <p> Slides will be posted before each lecture, and
+                annotated slides (with all notes taken on them by the
+                instructor during lecture) will be posted after each
+                lecture. We will make reasonable attempts to record and post
+                each lecture. It is possible some lectures may not be recorded,
+                in which case we will not be able to do any make-ups of that lecture. We
+                encourage the students to attend the lectures in person (see the Participation Policy) and participate
+                in the class discussion. </p>
+              <p>
+                Section materials will also be posted by the TFs. These
+                materials serve as the reference material for the course
+                content.
+              </p>
+              <p>
+                In addition to the lecture slides, there is also a draft textbook being written for this course,
+                available <a href="https://rlbook.adzc.ai/">here</a>.
+                This material should closely follow the lecture content, notation,
+                and structure, with some additional material and examples (you are not responsible for the additional
+                material and examples, though you will hopefully find them helpful).
+                <strong>Feedback on any aspect of this draft is welcome and appreciated via the Ed forum.</strong>
+              </p>
+              <p>
+                Other references to learn more (but that are not necessarily aligned with the course in content or
+                level) are
+                <a href="https://rltheorybook.github.io/rltheorybook_AJKS.pdf">Reinforcement Learning Theory and
+                  Algorithms</a> and <a href="http://incompleteideas.net/book/bookdraft2017nov5.pdf">Reinforcement
+                  Learning: An Introduction</a>.
+              </p>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <p align="center">
+                <heading>Assignment Schedule (tentative)</heading>
+              </p>
+
+              <table>
+                <tbody>
+                  <tr height="50" bgcolor="#F8F8FF">
+                    <td><strong>Assignment</strong></td>
+                    <td><strong>Deadline</strong></td>
+                  </tr>
+
+                  <tr height="50">
+                    <td>Homework 0</td>
+                    <td>11:59pm ET 9/12/2024</td>
+                  </tr>
+
+                  <tr height="50" bgcolor="#F8F8FF">
+                    <td>Homework 1</td>
+                    <td>11:59pm ET 9/29/2024</td>
+                  </tr>
+
+                  <tr height="50">
+                    <td>Homework 2</td>
+                    <td>11:59pm ET 10/13/2024</td>
+                  </tr>
+
+                  <tr height="50" bgcolor="#F8F8FF">
+                    <td>Homework 3</td>
+                    <td>11:59pm ET 11/11/2024</td>
+                  </tr>
+
+                  <tr height="50">
+                    <td>Project Proposal</td>
+                    <td>11:59pm ET 11/18/2024</td>
+                  </tr>
+
+                  <tr height="50" bgcolor="#F8F8FF">
+                    <td>Homework 4</td>
+                    <td>11:59pm ET 11/26/2024</td>
+                  </tr>
+
+                  <tr height="50">
+                    <td>Project Milestone</td>
+                    <td>11:59pm ET 12/2/2024</td>
+                  </tr>
+
+                  <tr height="50" bgcolor="#F8F8FF">
+                    <td>Final Project</td>
+                    <td>11:59pm ET 12/13/2024</td>
+                  </tr>
+
+                </tbody>
+            </td>
+          </tr>
+        </table>
+
+
+
+      </td>
+    </tr>
+  </table>
+
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tr>
+    <td width="100%" valign="middle">
+      <p align="center">
+        <heading>Class Meeting Schedule (tentative)</heading>
+      </p>
+      <table>
+        <tbody>
+          <tr height="50" bgcolor="#F8F8FF">
+            <td></td>
+            <td></td>
+            <td> <strong>Lecture</strong></td>
+            <td><strong>Slides</strong></td>
+            <td><strong><a href="https://rlbook.adzc.ai/">Textbook</a></strong></td>
+          </tr>
+
+
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td> 9/4/24</td>
+            <td></td>
+            <td><strong>MDPs</strong>: Introduction to RL and Markov Decision Processes</td>
+            <td style="white-space:nowrap;"><a href="1.pdf">Slides</a> <br><a href="1a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              1.1-1.2.4
+            </td>
+          </tr>
+
+          <tr height="50">
+            <td> 9/9/24</td>
+            <td></td>
+            <td><strong>MDPs</strong>: Dynamic Programming</td>
+            <td style="white-space:nowrap;"><a href="2.pdf">Slides</a> <br><a href="2a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              1.2.4-1.4.3
+            </td>
+          </tr>
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td> 9/11/24</td>
+            <td></td>
+            <td><strong>MDPs</strong>: Discounted, Infinite Horizon MDPs</td>
+            <td style="white-space:nowrap;"><a href="3.pdf">Slides</a> <br><a href="3a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              1.5.1-1.5.2
+            </td>
+          </tr>
+
+          <tr height="50">
+            <td> 9/16/24</td>
+            <td></td>
+            <td><strong>MDPs</strong>: Value and Policy Iteration</td>
+            <td style="white-space:nowrap;"><a href="4.pdf">Slides</a> <br><a href="4a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              1.5.3
+            </td>
+          </tr>
+
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td> 9/18/24</td>
+            <td></td>
+            <td><strong>Control</strong>: Optimal Control in Linear Quadratic Regulator (LQRs)</td>
+            <td style="white-space:nowrap;"><a href="5.pdf">Slides</a> <br><a href="5a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              2.1-2.4.1
+            </td>
+          </tr>
+
+
+
+          <tr height="50">
+            <td> 9/23/24</td>
+            <td></td>
+            <td><strong>Control</strong>: Control for Nonlinear Systems (Iterative LQR)</td>
+            <td style="white-space:nowrap;"><a href="6.pdf">Slides</a> <br><a href="6a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              2.5.1-2.6.4
+            </td>
+          </tr>
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td>9/25/24</td>
+            <td></td>
+            <td><strong>Bandits</strong>: Introduction to Bandits</td>
+            <td style="white-space:nowrap;"><a href="7.pdf">Slides</a> <br><a href="7a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              3.1-3.4.1
+            </td>
+          </tr>
+
+          <tr height="50">
+            <td> 9/30/24</td>
+            <td></td>
+            <td><strong>Bandits</strong>: Explore-Then-Commit (ETC), &epsilon;-greedy</td>
+            <td style="white-space:nowrap;"><a href="8.pdf">Slides</a> <br><a href="8a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              3.4.1-3.5
+            </td>
+          </tr>
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td> 10/2/24</td>
+            <td></td>
+            <td><strong>Bandits</strong>: Upper Confidence Bound (UCB)</td>
+            <td style="white-space:nowrap;"><a href="9.pdf">Slides</a> <br><a href="9a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              3.6.1-3.6.2
+            </td>
+          </tr>
+
+
+          <tr height="50">
+            <td> 10/7/24</td>
+            <td></td>
+            <td><strong>Bandits</strong>: Thompson Sampling</span></td>
+            <td style="white-space:nowrap;"><a href="10.pdf">Slides</a> <br><a href="10a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              3.7
+            </td>
+          </tr>
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td> 10/9/24</td>
+            <td></td>
+            <td><strong>Learning</strong>: Supervised Learning</td>
+            <td style="white-space:nowrap;"><a href="11.pdf">Slides</a> <br><a href="11a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              4.1-4.3
+            </td>
+          </tr>
+
+          <tr height="50">
+            <td> 10/14/24</td>
+            <td></td>
+            <td> Holiday (no class) </td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td> 10/16/24</td>
+            <td></td>
+            <td><strong>Learning</strong>: Fitted Dynamic
+              Programming </td>
+            <td style="white-space:nowrap;"><a href="12.pdf">Slides</a> <br><a href="12a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              5.1-5.4
+            </td>
+          </tr>
+
+          <tr height="50">
+            <td> 10/21/24</td>
+            <td></td>
+            <td><strong>PG</strong>: (Stochastic) Gradient Descent & Policy Gradient</td>
+            <td style="white-space:nowrap;"><a href="13.pdf">Slides</a> <br><a href="13a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              6.1-6.4
+            </td>
+          </tr>
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td> 10/23/24</td>
+            <td></td>
+            <td><strong>Midterm</strong></td>
+            <td style="white-space:nowrap;"></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr height="50">
+            <td> 10/28/24</td>
+            <td></td>
+            <td><strong>PG</strong>: Estimation and Baselines</td>
+            <td style="white-space:nowrap;"><a href="14.pdf">Slides</a> <br><a href="14a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              6.5
+            </td>
+          </tr>
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td> 10/30/24</td>
+            <td></td>
+            <td><strong>PG</strong>: Trust Region Methods and Natural PG</td>
+            <td style="white-space:nowrap;"><a href="15.pdf">Slides</a> <br><a href="15a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+                6.6-6.7
+            </td>
+          </tr>
+
+          <tr height="50">
+            <td> 11/4/24</td>
+            <td></td>
+            <td><strong>PG</strong>: NPG and PPO</td>
+            <td style="white-space:nowrap;"><a href="16.pdf">Slides</a> <br><a href="16a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+                6.8-6.9
+            </td>
+          </tr>
+
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td> 11/6/24</td>
+            <td></td>
+            <td><strong>Embedded EthiCS</strong></td>
+            <td style="white-space:nowrap;"><a href="17.pdf">Slides</a> <br><a href="17a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+            </td>
+          </tr>
+
+          <tr height="50">
+            <td> 11/11/24</td>
+            <td></td>
+            <td><strong>PG</strong>: PPO & Importance Sampling</td>
+            <td style="white-space:nowrap;"><a href="18.pdf">Slides</a> <br><a href="18a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              6.9-6.10
+            </td>
+          </tr>
+
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td> 11/13/24</td>
+            <td></td>
+            <td><strong>Imitation Learning</strong>: Behavior
+              Cloning & DAgger</td>
+            <td style="white-space:nowrap;"><a href="19.pdf">Slides</a> <br><a href="19a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              7.1-7.4
+            </td>
+          </tr>
+
+          <tr height="50">
+            <td> 11/18/24</td>
+            <td></td>
+            <td><strong>MCTS</strong>: Monte Carlo Tree Search</td>
+            <td style="white-space:nowrap;"><a href="20.pdf">Slides</a> <br><a href="20a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              8.1-8.3
+            </td>
+          </tr>
+
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td>11/20/24</td>
+            <td></td>
+            <td><strong>Exploration</strong>: Exploration in MDPs and UCB-VI</td>
+            <td style="white-space:nowrap;"><a href="21.pdf">Slides</a> <br><a href="21a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              9.1-9.5
+            </td>
+          </tr>
+
+
+          <tr height="50">
+            <td> 11/25/24</td>
+            <td></td>
+            <td><strong>Bandits</strong>: Linear Bandits</td>
+            <td style="white-space:nowrap;"><a href="22.pdf">Slides</a> <br><a href="22a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              3.8
+            </td>
+          </tr>
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td> 11/27/24</td>
+            <td></td>
+            <td> Holiday (no class) </td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr height="50">
+            <td> 12/2/24</td>
+            <td></td>
+            <td><strong>Bandits</strong>: Contextual Bandits</td>
+            <td style="white-space:nowrap;"><a href="23.pdf">Slides</a> <br><a href="23a.pdf">Annotated Slides</a>&nbsp
+            </td>
+            <td>
+              3.8-3.9
+            </td>
+          </tr>
+
+          <tr height="50" bgcolor="#F8F8FF">
+            <td>12/4/24</td>
+            <td></td>
+            <td><strong>TBD</strong></td>
+            <td style="white-space:nowrap;">
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+  </td>
+  </tr>
+  </table>
+</body>
+
+
+
+</html>

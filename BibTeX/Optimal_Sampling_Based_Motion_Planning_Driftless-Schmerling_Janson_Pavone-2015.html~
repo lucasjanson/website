@@ -1,0 +1,11 @@
+<pre>
+@InProceedings{JS-JG-ES-LJ-LM-MP:2015,
+  author = {Schmerling, Edward and Janson, Lucas and Pavone, Marco},
+  title = {Optimal Sampling-Based Motion Planning Under Differential
+    Constraints: The Driftless Case},
+  booktitle = {IEEE Conference on Robotics and Automation},
+  year = {2015},
+  address = {Seattle, WA},
+  month = {May}
+}
+</pre>
