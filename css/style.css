@@ -1,0 +1,17 @@
+body {
+}
+
+h2 {
+  font-variant: small-caps;
+}
+
+p.bibitem {
+  margin-left: 2rem;
+  margin-bottom: .7rem !important;
+  text-indent: -2rem;
+}
+
+.bs-sidebar .nav > .active > ul {
+    display: block;
+    margin-bottom: 8px;
+}

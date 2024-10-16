@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Note there is no responsive meta tag here -->
+
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Lucas Janson | Software</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/non-responsive.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+	  <a class="navbar-brand" href="index.html" >Lucas Janson</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li class="active"><a href="#">Software</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <h3>Powerful Knockoffs via Minimizing Reconstructability</h3>
+        <p>
+	  <a href="https://github.com/amspector100/knockpy">Here</a> is a general-purpose modular Python package efficiently implementing many existing methods for knockoffs (such as generating knockoffs and computing test statistics), including a framework for generating knockoffs that minimize the reconstructability, which can provide a big increase in power over existing knockoff generators when covariates are correlated. And <a href="https://github.com/amspector100/mrcrep">here</a> is code for precisely replicating the experiments in the associated paper.
+	</p>
+
+      <h3>Floodgate: Inference for Model-Free Variable Importance</h3>
+        <p>
+          An R package and tutorials can be found <a href="https://github.com/LuZhangH/floodgate">here</a> for running floodgate to provide a lower confidence bound for the minimum mean squared error gap, an interpretable model-free measure of variable importance that is sensitive to arbitrary nonlinearities and interactions.
+        </p>
+
+      <h3>The dCRT: An Exact, Fast, and Powerful Conditional Independence Test</h3>
+        <p>
+          R code and examples can be found <a href="https://github.com/moleibobliu/Distillation-CDR">here</a> for running the distilled conditional randomization test (dCRT), a much faster way to run the conditional randomization test (CRT) for exact and powerful conditional independence testing.
+        </p>
+
+      <h3>Conditional Knockoffs: Relaxing the Assumptions of Knockoffs</h3>
+        <p>
+	  R code can be found <a href="https://github.com/stathuang/cknockoff">here</a> and tutorials can be found <a href="code/ConditionalKnockoffs/index.html">here</a> for running conditional knockoffs, which are a way to run model-X knockoffs (with all the same guarantees and nearly as much power) without assuming the distribution of X is known, only that a flexible parametric model for the covariate distribution is known.
+        </p>
+
+      <h3>Metropolized Knockoff Sampling</h3>
+        <p>
+	  R and Python code can be found <a href="https://github.com/wenshuow/metro">here</a> and tutorials/notebooks can be found <a href="http://web.stanford.edu/group/candes/metro/">here</a> for running the Metropolized knockoff sampler to flexibly construct exact model-X knockoffs using tools from the Markov chain Monte Carlo and graphical models literature. A new, more general knockoffs Python package is available <a href="https://github.com/amspector100/knockpy">here</a> that includes an implementation of the Metropolized knockoff sampler.
+        </p>
+
+      <h3>Model-X Knockoffs: High-Dimensional Controlled Variable Selection</h3>
+	<p>
+	  R, Python, and MATLAB packages, as well as examples/vignettes can be found <a href="http://web.stanford.edu/group/candes/knockoffs/">here</a> for running model-X knockoffs to perform
+	  variable selection while controlling the false discovery
+	  rate, even in high dimensions and when the conditional model
+	  for the response variable is unknown. A newer, more general knockoffs Python package is available <a href="https://github.com/amspector100/knockpy">here</a>.
+	</p>
+
+      <h3>EigenPrism: Inference for High-Dimensional Signal-to-Noise Ratios</h3>
+	<p>
+	  <a href="code/EigenPrism.R">R function</a> for running
+	  EigenPrism to compute confidence intervals for the norm of
+	  the coefficient vector, noise level, or signal-to-noise
+	  ratio in high-dimensional regression problems without
+	  assuming sparsity or random effects. 
+	  <a href="code/EigenPrism_MATLAB_code.zip">MATLAB code</a>
+	  implementing the EigenPrism procedure and the simulations
+	  and analyses in the paper.
+	</p>
+
+      <h3>Familywise Error Rate Control Via Knockoffs</h3>
+	<p>
+	  <a href="code/FWER_knockoffs_code.zip">MATLAB
+	code</a>
+	implementing knockoffs for familywise error rate control and
+	reproducing figures in paper. Knockoffs allows the user to
+	control the familywise error rate in linear regression
+	problems with more observations than variables.
+	</p>
+
+      <h3>QUARTS: A Robust Method for Paleoclimate Reconstructions</h3>
+	<p>
+	  <a href="code/QUARTS.zip">R Code</a> implementing QUAntile
+	  Regression with Time Series errors (QUARTS). Includes script
+	  for applying QUARTS to a Northern Hemisphere paleoclimate
+	  reconstruction.
+	</p>
+
+      <h3>Monte Carlo Motion Planning (MCMP)</h3>
+	<p>
+	  This <a href="https://github.com/schmrlng/MCMP-ISRR15">github
+	  repository</a> contains a Julia implementation of MCMP, which is an 
+	  algorithm for autonomously planning (in the presence of
+	  uncertainty) a robot's trajectory through obstacles with a prespecified
+	  lower-bound on the probability of success (e.g. 99%).
+	</p>
+
+      <h3>Fast Marching Tree (FMT*)</h3>
+	<p>
+	  The <a href="http://ompl.kavrakilab.org/classompl_1_1geometric_1_1FMT.html">Open
+	  Motion Planning Library</a> contains an open-source
+	  C++ implementation of FMT*. FMT* is an
+	  asymptotically-optimal algorithm for autonomously planning a
+	  robot's trajectory through obstacles.
+	</p>
+
+</p>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+
+
+<!-- Please do not copy the following bit of code! It is used to track my
+   website usage, and if copied will mistaken add YOUR website
+   usage to my accounting. If you also want to track your website, you
+   can make a free account on statcounter.com -->
+<!-- Start of StatCounter Code for Default Guide --> 
+<script type="text/javascript"> 
+var sc_project=10539247; 
+var sc_invisible=1; 
+var sc_security="a729c4ae"; 
+var zsitename = "http://lucasjanson.fas.harvard.edu/"; 
+if (document.URL.indexOf(zsitename) > -1) { 
+var scJsHost = (("https:" == document.location.protocol) ? 
+"https://secure." : "http://www."); 
+document.write("<sc"+"ript type='text/javascript' src='" + 
+scJsHost+ 
+"statcounter.com/counter/counter.js'></"+"script>"); 
+} 
+</script> 
+<noscript><div class="statcounter"><a title="shopify site 
+analytics" href="http://statcounter.com/shopify/" 
+target="_blank"><img class="statcounter" 
+src="//c.statcounter.com/10539247/0/a729c4ae/1/" 
+alt="shopify site analytics"></a></div></noscript> 
+<!-- End of StatCounter Code for Default Guide -->
+
+  </body>
+</html>
